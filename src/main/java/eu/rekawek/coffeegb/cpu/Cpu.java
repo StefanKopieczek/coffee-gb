@@ -150,6 +150,7 @@ public class Cpu {
                     break;
 
                 case RUNNING:
+                    System.out.println("Executing 0x" + Integer.toHexString(opcode1) + " with registers " + registers);
                     if (opcode1 == 0x10) {
                         if (speedMode.onStop()) {
                             state = State.OPCODE;
